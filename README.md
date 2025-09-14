@@ -1,4 +1,6 @@
-# Exercise 1: 
+#Afleveringens indhold: 
+
+## Exercise 1: 
 
 4 identificerede entities/tabeller; 
 Car, Car_Group, Rental_Contract og Renter
