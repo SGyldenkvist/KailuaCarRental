@@ -86,31 +86,3 @@ VALUES
 (3,3,'2025-10-01 08:00:00', '2026-02-01 12:00:00', 1500, 120000);
 
 SELECT*FROM rental_contract;
-
--- Joins:
--- Alle rental_contracts med renter og car info:
-SELECT rc.rental_contract_id, r.name, c.registration_no, c.brand, c.model, rc.from_date, rc.to_date
-FROM rental_contract rc
-JOIN renter r USING (renter_id)
-JOIN car c USING (car_id)
-ORDER BY rc.from_date;
-
--- Find rental_contracts for en bestemt renter (email):
-SELECT rc.rental_contract_id, r.name, c.brand, c.model, rc.from_date, rc.to_date
-FROM rental_contract rc
-JOIN renter r USING (renter_id)
-JOIN car c USING (car_id)
-WHERE r.email = 'anna@example.com';
-
--- Find Car(s) fra en bestemt car_group:
-SELECT c.*
-FROM car c
-JOIN car_group g ON g.car_group_id = c.car_group_id
-WHERE g.name = 'Family';
-
--- Find rental_contracts i et dato-interval:
-SELECT r.name, c.brand, c.model, rc.from_date, rc.to_date
-FROM rental_contract rc
-JOIN renter r USING (renter_id)
-JOIN car c USING (car_id)
-WHERE rc.from_date >= '2025-09-17 09:00:00' AND rc.to_date <= '2025-12-17 10:00:00';
