@@ -50,12 +50,22 @@ Plan for script:
 
 ## Exercise 3: 
 
-Screenshots af databasen, oprettet i DataGrip ligger i "..."
+Screenshots af databasen, oprettet i DataGrip ligger i "screenshots.pdf"
+(hvis jeg forstår opgaven rigtigt)
 
 
 
 ## Exercise 4: 
 
-Java programmet ligger i: "..." 
+* Java programmet ligger i: "..."
+  
+* Jeg har lavet en klasse der har forbindelse til databasen; AccessDB.
+* Jeg har lavet en klasse for hver af mine entities, der opretter instanser af Renter, Car og RentalContract.
+* Der er en klasse der starter programmet Main, den kalder UI-klassen, den viser en brugermenu, hvor man vælger om man vil se, oprette, slette eller redigere. For Car kan man kun redigere odometeret, for Renter kan man kun ændre phone, for RentalContract kan man kun ændre slutdatoen (indtil videre). Når man har valgt skal man vælge hvilken entitet/klasse/objekt det drejer sig om.
+* Herfra kaldes metoderne fra klasserne; CarService, RenterService og RentalContractService.
+
+* Der er en masse fejl. Der er også stavefejl i driver license, men altså.. noget lykkedes.
+
+
 
 
